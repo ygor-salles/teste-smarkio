@@ -1,0 +1,243 @@
+.overlay svg path,
+.overlay svg circle {
+  -webkit-animation: logo 2s ease infinite alternate;
+          animation: logo 2s ease infinite alternate;
+}
+
+@-webkit-keyframes logo {
+  from {
+    fill: rgba(152, 85, 212, 0.4);
+  }
+  to {
+    fill: #9855d4;
+  }
+}
+
+@keyframes logo {
+  from {
+    fill: rgba(152, 85, 212, 0.4);
+  }
+  to {
+    fill: #9855d4;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  background: #f8f8f8;
+}
+
+html,
+body,
+input,
+button,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 85%;
+  outline: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 40px 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 40px 10px;
+    height: 100%;
+  }
+}
+
+.container .overlay {
+  display: none;
+}
+
+.container section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  .container section {
+    padding: 0;
+  }
+}
+
+.container section span {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #363636;
+  margin-bottom: 16px;
+}
+
+.container section textarea {
+  height: 120px;
+  margin-bottom: 16px;
+  border: 1px solid #c3c3c3;
+  font-size: 1rem;
+  padding: 10px 10px;
+}
+
+.container section button {
+  font-size: 1rem;
+  height: 36px;
+  font-weight: 600;
+  color: #363636;
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container section button:active {
+  background: #c3c3c3;
+}
+
+.container section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container section div p {
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  color: #818181;
+}
+
+.container section div button {
+  min-width: 75px;
+  height: 30px;
+  margin-left: 40px;
+}
+
+.container section:first-child {
+  border-right: 2px solid #cdcdcd;
+  padding-right: 100px;
+}
+
+@media screen and (max-width: 1100px) {
+  .container section:first-child {
+    padding-right: 0;
+    border: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.container section:nth-child(2) {
+  padding-left: 100px;
+  overflow-y: scroll;
+  /* TODO O SCROLL */
+  /* Track */
+  /* BARRA SCROLL */
+}
+
+.container section:nth-child(2)::-webkit-scrollbar {
+  width: 6px;
+}
+
+.container section:nth-child(2)::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.container section:nth-child(2)::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.container section:nth-child(2)::-webkit-scrollbar-thumb {
+  background: #c3c3c3;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.container section:nth-child(2)::-webkit-scrollbar-thumb:hover {
+  background: #818181;
+}
+
+@media screen and (max-width: 1100px) {
+  .container section:nth-child(2) {
+    padding-left: 0;
+    padding-right: 0;
+    overflow-y: visible;
+  }
+}
+
+.loading .overlay {
+  background: rgba(242, 243, 245, 0.8);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.loading .overlay svg {
+  width: 25vh;
+  height: auto;
+}
+
+.loading .overlay span {
+  color: #9855d4;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+}
+/*# sourceMappingURL=globals.css.map */
